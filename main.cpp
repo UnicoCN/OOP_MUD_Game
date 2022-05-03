@@ -8,10 +8,6 @@ class Map {
 
 };
 
-class Floor : public Map {
-    string Floor[10] = "d  d s e  d d"
-
-}
 
 void Echo_Static() {
     cout << "属性:" << endl;
