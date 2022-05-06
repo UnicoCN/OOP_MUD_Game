@@ -45,16 +45,15 @@ void start_menu::reprint_menu()
     return;
 }
 
-void start_menu::dead_lock()
+int start_menu::dead_lock()
 {
     system("mode con cols=200 lines=200");
     print_pic();
     print_menu();
-    input_check();
-    return;
+    return input_check();
 }
 
-void start_menu::input_check()
+int start_menu::input_check()
 {
     int ch;
     while(1)
@@ -66,8 +65,7 @@ void start_menu::input_check()
             {
                 case 13:
                     std::cout << "Confirm choice" << std::endl;
-                    while(1);
-                    return;
+                    return choice;
                 case 72:
                     choice = (choice + 3) % 4;
                     reprint_menu();

@@ -18,11 +18,11 @@ class start_menu
             menu[3] = "退出游戏";
             lots_of_tab = ";                                                                                             ";
         }
-        void dead_lock();
+        int dead_lock();
         void print_menu();
         void print_pic();
         void reprint_menu();
-        void input_check();
+        int input_check();
 };
 
 
