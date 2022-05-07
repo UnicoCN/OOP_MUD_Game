@@ -12,11 +12,10 @@ int main() {
         attr.Show_Starveness();
         attr.Show_Weapons();
         attr.Show_Props();
-        attr.Show_Floor();
         Map m;
+        m.Show_Floor();
         m.Draw_Map();
-        while(1);
+        m.Listen_Keyboard();
     }    
-    while (1) {};
     return 0;
 }

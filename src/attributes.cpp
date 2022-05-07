@@ -11,7 +11,6 @@ Attributes::Attributes() {
     Props[0] = "一把破旧的钥匙";
     Blood = 100;
     Starveness = 100;
-    floor = 10;
 }
 
 void Attributes::Show_Blood() {
@@ -38,13 +37,6 @@ void Attributes::Show_Props() {
     for (int i = 0; i < Props_Num; ++i)
         std::cout << Props[i] << " ";
     std::cout << std::endl;
-}
-
-void Attributes::Show_Floor() {
-    SetConsoleOutputCP(65001);
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_RED);
-    std::cout << "当前楼层:" << floor << std::endl;
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_RED | FOREGROUND_BLUE);
 }
 
 void Attributes::Change_Blood(int num) {

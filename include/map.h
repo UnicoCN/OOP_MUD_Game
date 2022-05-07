@@ -15,8 +15,15 @@ private:
     unsigned long light_y = 4;
     unsigned long monster_x = 100;
     unsigned long monster_y = 0;
+    unsigned long floor;
 public:
+    Map () {
+        floor = 10;
+    }
+    void Show_Floor();
     void Draw_Map();
+    void Change_Human_Position(int dis);
+    void Listen_Keyboard();
 };
 
 #endif
