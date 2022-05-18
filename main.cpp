@@ -3,9 +3,16 @@
 #include "include/map.h"
 #include "include/IO.h"
 
+#include <windows.h>
 
 int main() {
     start_menu Menu;
+    HANDLE handle;
+    CONSOLE_CURSOR_INFO CursorInfo;
+    handle = GetStdHandle(STD_OUTPUT_HANDLE);
+    GetConsoleCursorInfo(handle, &CursorInfo);//获取控制台光标信息
+    CursorInfo.bVisible = false; //隐藏控制台光标
+    SetConsoleCursorInfo(handle, &CursorInfo);//设置控制台光标状态
     int choice = Menu.dead_lock();
     if (choice == 0) {
         system("cls");

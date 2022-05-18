@@ -70,17 +70,58 @@ void Map::Draw_Map()
     std::cout << std::endl;
 }
 
+void Map::Update_Map() {
+    HANDLE hOut;
+    HANDLE handle;
+    COORD pos={0, 10};
+    hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleCursorPosition(hOut,pos);
+    int del_block[5];// 处理中文的字节占用问题
+    memset(del_block,0,sizeof(del_block));
+    for (int i = 0; i >= 0; --i) {
+        for (int j = 0; j < width; ++j) {
+            if (j == human_x && i == human_y) {
+                del_block[i] ++;
+                std::cout << "人";
+                continue;
+            } 
+            if (j == light_x && i ==  light_y) {
+                del_block[i] ++;
+                std::cout << "灯";
+                continue;
+            }
+            if (j == monster_x && i == monster_y) {
+                del_block[i] ++;
+                std::cout << "怪";
+                continue;
+            }
+            if (j == door_x && i == door_y) {
+                del_block[i] ++;
+                std::cout << "门";
+                continue;
+            }
+            if (j == stairs_x && i == stairs_y) {
+                del_block[i] ++;
+                std::cout << "梯";
+                continue;
+            }
+            if (j == width -1 - del_block[i]) {
+                std::cout << "|" << std::endl;
+                j = width;
+                continue;
+            }
+            std::cout << " ";
+        }
+    }
+    for (int i = 0;  i < width; ++i)
+        std::cout << "-";
+    std::cout << std::endl;
+}
+
 void Map::Change_Human_Position(int dis)
 {
     human_x += dis;
-    system("cls");
-    Attributes attr;
-    attr.Show_Blood();
-    attr.Show_Starveness();
-    attr.Show_Weapons();
-    attr.Show_Props();
-    this->Show_Floor();
-    this->Draw_Map();
+    this->Update_Map();
 }
 
 void Map::Listen_Keyboard()

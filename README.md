@@ -5,20 +5,30 @@
 ````bash
 │  main.cpp
 │  Makefile
-│  pic.txt
 │  README.md
+│
+├─.vscode
+│      c_cpp_properties.json
+│      launch.json
+│      settings.json
 │
 ├─include
 │      attributes.h
+│      IO.h
 │      map.h
 │      start_menu.h
-|	   IO.h (new)
+│
+├─pic
+│      pic.txt
+│
+├─save
+│      save7.txt
 │
 └─src
         attributes.cpp
+        IO.cpp
         map.cpp
         start_menu.cpp
-        IO.cpp (new)
 ````
 
 ##### Compile & Run
