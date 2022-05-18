@@ -8,7 +8,7 @@
 void start_menu::print_pic()
 {
     std::ifstream test;
-    test.open("pic.txt", std::ios::in);
+    test.open(".\\pic\\pic.txt", std::ios::in);
     if(!test.is_open())
         std::cout << "ERROR!" << std::endl;
     else
