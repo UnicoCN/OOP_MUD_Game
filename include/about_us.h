@@ -1,5 +1,5 @@
-#ifndef ABOUT_US
-#define ABOUT_US
+#ifndef _ABOUT_US
+#define _ABOUT_US
 
 class About_US {
 public:

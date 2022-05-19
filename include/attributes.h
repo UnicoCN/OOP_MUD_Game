@@ -1,5 +1,5 @@
-#ifndef START_GAME_H
-#define START_GAME_H
+#ifndef _START_GAME_H
+#define _START_GAME_H
 
 #include<string>
 #include<stdbool.h>

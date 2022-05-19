@@ -8,7 +8,7 @@ make.exe: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu May 19 22:18:28 2022
+# Make data base, printed on Thu May 19 23:13:51 2022
 
 # Variables
 
@@ -63,7 +63,7 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-0481b846-4e56-4e10-9010-4f0a38f54236-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-de2c3a5e-52e3-4633-9646-e8605b850620-sock
 # environment
 VSCODE_CWD = D:\Microsoft VS Code
 # default
@@ -97,7 +97,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_3172_OBCAJBPBALYHGNXK
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_6812_RONOVIPCZSNZPHYU
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -140,6 +140,8 @@ MAKELEVEL := 0
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
+# makefile (from 'Makefile', line 2)
+include_file = include/start_menu.h include/attributes.h include/map.h include/IO.h include/play_music.h include/environment_setting.h include/about_us.h include/food.h
 # default
 MAKE_VERSION := 4.2.1
 # makefile
@@ -170,6 +172,8 @@ OS = Windows_NT
 VSCODE_IPC_HOOK = \\.\pipe\2d48f20f2f755c696283148fe84d806b-1.67.2-main-sock
 # environment
 HOMEPATH = \Users\IvanH
+# makefile (from 'Makefile', line 1)
+src_file = main.cpp src/start_menu.cpp src/attributes.cpp src/map.cpp src/IO.cpp src/play_music.cpp src/environment_setting.cpp src/about_us.cpp src/food.cpp 
 # environment
 COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
 # environment
@@ -223,11 +227,11 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-VSCODE_PID = 3172
+VSCODE_PID = 6812
 # environment
 USERDOMAIN_ROAMINGPROFILE = LAPTOP-CCFHHGVA
 # variable set hash-table stats:
-# Load=107/1024=10%, Rehash=0, Collisions=16/129=12%
+# Load=109/1024=11%, Rehash=0, Collisions=18/133=14%
 
 # Pattern-specific Variable Values
 
@@ -235,9 +239,9 @@ USERDOMAIN_ROAMINGPROFILE = LAPTOP-CCFHHGVA
 
 # Directories
 
-# . (key e:/OOP_MUD_Game, mtime 1652969346): 13 files, no impossibilities.
+# . (key e:/OOP_MUD_Game, mtime 1652973057): 12 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -284,7 +288,7 @@ include/play_music.h:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-19 22:18:24
+#  Last modified 2022-05-19 23:05:32
 #  File has been updated.
 #  Successfully updated.
 
@@ -337,6 +341,12 @@ include/about_us.h:
 #  File has not been updated.
 
 # Not a target:
+include/food.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 src/IO.cpp:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -365,30 +375,36 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 6):
+#  recipe to execute (from 'Makefile', line 8):
 	del *.exe 
 
-One_Way_Out.exe: main.cpp src/start_menu.cpp src/attributes.cpp src/map.cpp src/IO.cpp src/play_music.cpp src/environment_setting.cpp src/about_us.cpp include/start_menu.h include/attributes.h include/map.h include/IO.h include/play_music.h include/environment_setting.h include/about_us.h
+# Not a target:
+src/food.cpp:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 2):
+
+One_Way_Out.exe: main.cpp src/start_menu.cpp src/attributes.cpp src/map.cpp src/IO.cpp src/play_music.cpp src/environment_setting.cpp src/about_us.cpp src/food.cpp include/start_menu.h include/attributes.h include/map.h include/IO.h include/play_music.h include/environment_setting.h include/about_us.h include/food.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 4):
 	g++ main.cpp src/start_menu.cpp src/attributes.cpp src/map.cpp src/IO.cpp src/play_music.cpp src/environment_setting.cpp src/about_us.cpp -o One_Way_Out.exe -lwinmm
 
 # files hash-table stats:
-# Load=22/1024=2%, Rehash=0, Collisions=0/49=0%
+# Load=24/1024=2%, Rehash=0, Collisions=0/53=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 32 / storage = 389 B / avg = 12 B
-# current buf: size = 8162 B / used = 389 B / count = 32 / avg = 12 B
+# strcache buffers: 1 (0) / strings = 34 / storage = 417 B / avg = 12 B
+# current buf: size = 8162 B / used = 417 B / count = 34 / avg = 12 B
 
-# strcache performance: lookups = 42 / hit rate = 23%
+# strcache performance: lookups = 43 / hit rate = 20%
 # hash-table stats:
-# Load=32/8192=0%, Rehash=0, Collisions=1/42=2%
-# Finished Make data base on Thu May 19 22:18:28 2022
+# Load=34/8192=0%, Rehash=0, Collisions=1/43=2%
+# Finished Make data base on Thu May 19 23:13:51 2022
 
  
