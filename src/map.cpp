@@ -5,6 +5,10 @@
 
 #include "../include/map.h"
 #include "../include/attributes.h"
+#include "../include/IO.h"
+#include "../include/start_menu.h"
+
+extern start_menu Menu;
 
 /*
     Check_Object
@@ -149,6 +153,12 @@ void Map::Listen_Keyboard()
                 break;
             case 77:
                 this->Change_Human_Position(1);
+                break;
+            case 27:
+                IO io_save;
+                io_save.write_map(*this);
+                system("cls");
+                Menu.Choose();
                 break;
             default:
                 this->Change_Human_Position(0);

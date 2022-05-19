@@ -4,6 +4,14 @@
 #include<windows.h>
 
 #include "../include/start_menu.h"
+#include "../include/attributes.h"
+#include "../include/IO.h"
+#include "../include/map.h"
+#include "../include/about_us.h"
+
+extern Map m;
+extern About_US as;
+extern Attributes attr;
 
 void start_menu::print_pic()
 {
@@ -76,5 +84,34 @@ int start_menu::input_check()
                     break;
             }
         }
+    }
+}
+
+void start_menu::Choose() {
+    int choice = this->dead_lock();
+    if (choice == 0) {
+        system("cls");
+        attr.Show_All();
+        IO io_ini;
+        io_ini.read_map(m);
+        m.Show_Floor();
+        m.Draw_Map();
+        m.Listen_Keyboard();
+    }
+    else if(choice == 1)
+    {
+        IO read;
+        Map test;
+        test.floor = 7;
+        read.read_map(test);
+        system("cls");
+        auto it = test.light.begin();
+        for(; it != test.light.end(); it++)
+            printf("%d %d\n", (*it).first, (*it).second);
+        while(1);
+    } else if (choice == 2) {
+        as.Show();
+    } else if (choice == 3) {
+        exit(0);
     }
 }

@@ -33,6 +33,7 @@ public:
     void Listen_Keyboard();
     /* 判断当前坐标是否有物品 */
     int Check_Object(int x, int y);
+    void Draw_Menu();
 };
 
 #endif

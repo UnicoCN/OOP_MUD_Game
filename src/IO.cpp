@@ -120,6 +120,7 @@ bool IO::read_map(Map &data)
                 while (1)
                 {
                     in_stream >> x >> y;
+                    // std::cout << x << "," << y << std::endl;
                     if (x == -1 && y == -1)
                         break;
                     data.stair.push_back(std::make_pair(x, y));

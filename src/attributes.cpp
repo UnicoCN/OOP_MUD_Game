@@ -39,6 +39,13 @@ void Attributes::Show_Props() {
     std::cout << std::endl;
 }
 
+void Attributes::Show_All() {
+    this->Show_Blood();
+    this->Show_Starveness();
+    this->Show_Weapons();
+    this->Show_Props();
+}
+
 void Attributes::Change_Blood(int num) {
 
 }

@@ -8,7 +8,7 @@ make.exe: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu May 19 15:50:49 2022
+# Make data base, printed on Thu May 19 22:18:28 2022
 
 # Variables
 
@@ -20,8 +20,6 @@ GNUMAKEFLAGS :=
 ?F = $(notdir $?)
 # environment
 QTMSBUILD = C:\Users\IvanH\AppData\Local\QtMsBuild
-# environment
-WSLENV = WT_SESSION::WT_PROFILE_ID
 # default
 .SHELLFLAGS := -c
 # makefile
@@ -47,13 +45,13 @@ CLION = D:\CLion 2021.2.3\bin;
 # environment
 WINDIR = C:\WINDOWS
 # environment
-VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"42e84e0914b17800d483f69e299e1b00.zh-cn","_translationsConfigFile":"C:\\Users\\IvanH\\AppData\\Roaming\\Code\\clp\\42e84e0914b17800d483f69e299e1b00.zh-cn\\tcf.json","_cacheRoot":"C:\\Users\\IvanH\\AppData\\Roaming\\Code\\clp\\42e84e0914b17800d483f69e299e1b00.zh-cn","_resolvedLanguagePackCoreLocation":"C:\\Users\\IvanH\\AppData\\Roaming\\Code\\clp\\42e84e0914b17800d483f69e299e1b00.zh-cn\\da15b6fd3ef856477bf6f4fb29ba1b7af717770d","_corruptedFile":"C:\\Users\\IvanH\\AppData\\Roaming\\Code\\clp\\42e84e0914b17800d483f69e299e1b00.zh-cn\\corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"42e84e0914b17800d483f69e299e1b00.zh-cn","_translationsConfigFile":"C:\\Users\\IvanH\\AppData\\Roaming\\Code\\clp\\42e84e0914b17800d483f69e299e1b00.zh-cn\\tcf.json","_cacheRoot":"C:\\Users\\IvanH\\AppData\\Roaming\\Code\\clp\\42e84e0914b17800d483f69e299e1b00.zh-cn","_resolvedLanguagePackCoreLocation":"C:\\Users\\IvanH\\AppData\\Roaming\\Code\\clp\\42e84e0914b17800d483f69e299e1b00.zh-cn\\c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5","_corruptedFile":"C:\\Users\\IvanH\\AppData\\Roaming\\Code\\clp\\42e84e0914b17800d483f69e299e1b00.zh-cn\\corrupted.info","_languagePackSupport":true}
 # environment
 ONEDRIVE = C:\Users\IvanH\OneDrive
 # environment
 PUBLIC = C:\Users\Public
 # environment
-PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # environment
@@ -65,21 +63,19 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-f3175567-3330-4772-9875-866655aeaeee-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-0481b846-4e56-4e10-9010-4f0a38f54236-sock
 # environment
-VSCODE_CWD = E:\OOP_MUD_Game
+VSCODE_CWD = D:\Microsoft VS Code
 # default
 MAKE_HOST := Windows32
 # environment
-PATH = C:\Program Files\Eclipse Adoptium\jdk-17.0.1.12-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk-15.0.1\bin;D:\Vim\vim82;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;D:\Xilinx\Vivado\2017.4\bin;D:\texlive\2021\bin\win32;C:\ProgramData\chocolatey\bin;C:\Users\IvanH\AppData\Local\Programs\Python\Python38\;D:\Desktop\CTF\sqlmap-dev;C:\Program Files\Java\jdk-15.0.2\bin;C:\Program Files\Java\jdk-15.0.2\jre\bin;C:\cmder;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\IvanH\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\IvanH\AppData\Local\Microsoft\WindowsApps;C:\Users\IvanH\AppData\Local\GitHubDesktop\bin;C:\MinGW\bin;D:\modeltech64_10.4\win64;C:\Users\IvanH\.dotnet\tools;D:\Microsoft VS Code\bin;D:\CLion 2021.2.3\bin;D:\cmder
+PATH = C:\Program Files\Eclipse Adoptium\jdk-17.0.1.12-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk-15.0.1\bin;D:\Vim\vim82;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;D:\Xilinx\Vivado\2017.4\bin;D:\texlive\2021\bin\win32;C:\ProgramData\chocolatey\bin;C:\Users\IvanH\AppData\Local\Programs\Python\Python38\;D:\Desktop\CTF\sqlmap-dev;C:\Program Files\Java\jdk-15.0.2\bin;C:\Program Files\Java\jdk-15.0.2\jre\bin;C:\cmder;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\IvanH\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\IvanH\AppData\Local\Programs\Python\Python38\;C:\Users\IvanH\AppData\Local\Microsoft\WindowsApps;C:\Users\IvanH\AppData\Local\GitHubDesktop\bin;C:\MinGW\bin;D:\modeltech64_10.4\win64;D:\Vim\vim82;C:\Users\IvanH\.dotnet\tools;D:\texlive\2021\bin\win32;D:\Microsoft VS Code\bin;D:\Desktop\CTF\sqlmap-dev;D:\CLion 2021.2.3\bin;;D:\cmder;C:\Program Files\MySQL\MySQL Server 8.0\bin;
 # environment
 ONLINESERVICES = Online Services
 # environment
 COMMONPROGRAMW6432 = C:\Program Files\Common Files
 # environment
 ZES_ENABLE_SYSMAN = 1
-# environment
-LC_ALL = C
 # environment
 CHOCOLATEYLASTPATHUPDATE = 132767680797709090
 # environment
@@ -101,7 +97,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_31400_RHOWPVLLZCRETDSP
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_3172_OBCAJBPBALYHGNXK
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -117,8 +113,6 @@ ASL.LOG = Destination=file
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
-WT_SESSION = a311e5ca-edb5-471b-9c89-74f6fbe4d911
-# environment
 USERNAME = IvanH
 # environment
 MGLS_LICENSE_FILE = D:\modeltech64_10.4\win64\LICENSE.TXT
@@ -127,9 +121,7 @@ KMP_DUPLICATE_LIB_OK = TRUE
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-VSCODE_CLI = 1
-# environment
-VSCODE_CODE_CACHE_PATH = C:\Users\IvanH\AppData\Roaming\Code\CachedData\da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+VSCODE_CODE_CACHE_PATH = C:\Users\IvanH\AppData\Roaming\Code\CachedData\c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
@@ -161,7 +153,7 @@ PROGRAMFILES(X86) = C:\Program Files (x86)
 # environment
 LOCALAPPDATA = C:\Users\IvanH\AppData\Local
 # environment
-PSMODULEPATH = C:\Users\IvanH\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
 # default
 MAKE_COMMAND := make.exe
 # environment
@@ -175,7 +167,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
 # environment
 OS = Windows_NT
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\2d48f20f2f755c696283148fe84d806b-1.67.1-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\2d48f20f2f755c696283148fe84d806b-1.67.2-main-sock
 # environment
 HOMEPATH = \Users\IvanH
 # environment
@@ -201,8 +193,6 @@ APPDATA = C:\Users\IvanH\AppData\Roaming
 # environment
 TEMP = C:\Users\IvanH\AppData\Local\Temp
 # environment
-WT_PROFILE_ID = {61c54bbd-c2c6-5271-96e7-009a87ff44bf}
-# environment
 COMSPEC = C:\WINDOWS\system32\cmd.exe
 # default
 MAKEFILES := 
@@ -213,13 +203,15 @@ VS160COMCOMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio\2019\Communit
 # environment
 MKL_SERIAL = YES
 # environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
+LC_ALL = C
 # automatic
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
 # environment
 SYSTEMDRIVE = C:
+# environment
+SESSIONNAME = Console
 # environment
 PROCESSOR_REVISION = a502
 # default
@@ -231,11 +223,11 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-VSCODE_PID = 31400
+VSCODE_PID = 3172
 # environment
 USERDOMAIN_ROAMINGPROFILE = LAPTOP-CCFHHGVA
 # variable set hash-table stats:
-# Load=111/1024=11%, Rehash=0, Collisions=18/133=14%
+# Load=107/1024=10%, Rehash=0, Collisions=16/129=12%
 
 # Pattern-specific Variable Values
 
@@ -243,9 +235,9 @@ USERDOMAIN_ROAMINGPROFILE = LAPTOP-CCFHHGVA
 
 # Directories
 
-# . (key e:/OOP_MUD_Game, mtime 1652946516): 12 files, no impossibilities.
+# . (key e:/OOP_MUD_Game, mtime 1652969346): 13 files, no impossibilities.
 
-# 12 files, no impossibilities in 1 directories.
+# 13 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -272,7 +264,19 @@ all:
 #  File has not been updated.
 
 # Not a target:
+include/environment_setting.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 include/start_menu.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+include/play_music.h:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -280,7 +284,7 @@ include/start_menu.h:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-19 15:50:48
+#  Last modified 2022-05-19 22:18:24
 #  File has been updated.
 #  Successfully updated.
 
@@ -292,6 +296,12 @@ include/IO.h:
 
 # Not a target:
 src/map.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/environment_setting.cpp:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -315,6 +325,18 @@ src/start_menu.cpp:
 #  File has not been updated.
 
 # Not a target:
+src/play_music.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+include/about_us.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 src/IO.cpp:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -332,6 +354,12 @@ src/attributes.cpp:
 #  Modification time never checked.
 #  File has not been updated.
 
+# Not a target:
+src/about_us.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
@@ -340,27 +368,27 @@ clean:
 #  recipe to execute (from 'Makefile', line 6):
 	del *.exe 
 
-One_Way_Out.exe: main.cpp src/start_menu.cpp src/attributes.cpp src/map.cpp src/IO.cpp include/start_menu.h include/attributes.h include/map.h include/IO.h
+One_Way_Out.exe: main.cpp src/start_menu.cpp src/attributes.cpp src/map.cpp src/IO.cpp src/play_music.cpp src/environment_setting.cpp src/about_us.cpp include/start_menu.h include/attributes.h include/map.h include/IO.h include/play_music.h include/environment_setting.h include/about_us.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 2):
-	g++ main.cpp src/start_menu.cpp src/attributes.cpp src/map.cpp src/IO.cpp -o One_Way_Out.exe
+	g++ main.cpp src/start_menu.cpp src/attributes.cpp src/map.cpp src/IO.cpp src/play_music.cpp src/environment_setting.cpp src/about_us.cpp -o One_Way_Out.exe -lwinmm
 
 # files hash-table stats:
-# Load=16/1024=2%, Rehash=0, Collisions=0/37=0%
+# Load=22/1024=2%, Rehash=0, Collisions=0/49=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 25 / storage = 249 B / avg = 9 B
-# current buf: size = 8162 B / used = 249 B / count = 25 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 32 / storage = 389 B / avg = 12 B
+# current buf: size = 8162 B / used = 389 B / count = 32 / avg = 12 B
 
-# strcache performance: lookups = 35 / hit rate = 28%
+# strcache performance: lookups = 42 / hit rate = 23%
 # hash-table stats:
-# Load=25/8192=0%, Rehash=0, Collisions=1/35=3%
-# Finished Make data base on Thu May 19 15:50:49 2022
+# Load=32/8192=0%, Rehash=0, Collisions=1/42=2%
+# Finished Make data base on Thu May 19 22:18:28 2022
 
  

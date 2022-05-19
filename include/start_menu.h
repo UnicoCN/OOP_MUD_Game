@@ -1,5 +1,5 @@
-#ifndef _START_MENU_H
-#define _START_MENU_H
+#ifndef START_MENU_H
+#define START_MENU_H
 
 #include<string>
 
@@ -24,6 +24,7 @@ class start_menu
         void print_pic(); // 输出字符画
         void reprint_menu(); // 菜单刷新
         int input_check(); // 键盘监听
+        void Choose();
 };
 
 

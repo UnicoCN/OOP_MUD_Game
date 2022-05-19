@@ -1,5 +1,5 @@
-#ifndef _PLAY_MUSIC_H
-#define _PLAY_MUSIC_H
+#ifndef PLAY_MUSIC_H
+#define PLAY_MUSIC_H
 
 class play_music
 {

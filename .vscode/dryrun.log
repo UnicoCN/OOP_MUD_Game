@@ -1,5 +1,5 @@
 make.exe --dry-run --keep-going --print-directory
 make.exe: Entering directory 'e:/OOP_MUD_Game'
-g++ main.cpp src/start_menu.cpp src/attributes.cpp src/map.cpp src/IO.cpp -o One_Way_Out.exe
+g++ main.cpp src/start_menu.cpp src/attributes.cpp src/map.cpp src/IO.cpp src/play_music.cpp src/environment_setting.cpp src/about_us.cpp -o One_Way_Out.exe -lwinmm
 make.exe: Leaving directory 'e:/OOP_MUD_Game'
  
