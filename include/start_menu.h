@@ -15,7 +15,7 @@ class start_menu
         {
             menu[0] = "开始游戏";
             menu[1] = "继续游戏";
-            menu[2] = "游戏设置";
+            menu[2] = "关于我们";
             menu[3] = "退出游戏";
             lots_of_tab = "                                                                                             ";
         }

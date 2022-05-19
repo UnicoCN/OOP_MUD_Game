@@ -22,6 +22,8 @@ int main() {
         attr.Show_Weapons();
         attr.Show_Props();
         Map m;
+        IO io_ini;
+        io_ini.read_map(m);
         m.Show_Floor();
         m.Draw_Map();
         m.Listen_Keyboard();
@@ -29,7 +31,7 @@ int main() {
     else if(choice == 1)
     {
         IO read;
-        map_data test;
+        Map test;
         test.floor = 7;
         read.read_map(test);
         system("cls");

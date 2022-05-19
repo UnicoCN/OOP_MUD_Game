@@ -6,6 +6,30 @@
 #include "../include/map.h"
 #include "../include/attributes.h"
 
+/*
+    Check_Object
+    -1 没有物品
+    0 人
+    1 灯
+    2 怪
+    3 门 
+    4 梯
+    （待添加）
+*/
+
+int Map::Check_Object(int x, int y) {
+    if (x == this->people.first && y == this->people.second) return 0;
+    for (auto p = this->light.begin(); p != this->light.end(); ++p)
+        if (x == p->first && y == p->second) return 1;
+    for (auto p = this->monster.begin(); p != this->monster.end(); ++p)
+        if (x == p->first && y == p->second) return 2;
+    for (auto p = this->door.begin(); p != this->door.end(); ++p)
+        if (x == p->first && y == p->second) return 3;
+    for (auto p = this->stair.begin(); p != this->stair.end(); ++p)
+        if (x == p->first && y == p->second) return 4;
+    return -1;
+}
+
 void Map::Show_Floor()
 {
     SetConsoleOutputCP(65001);
@@ -26,43 +50,33 @@ void Map::Draw_Map()
     {
         for (int j = 0; j < width; ++j)
         {
-            if (j == human_x && i == human_y)
-            {
-                del_block[i]++;
-                std::cout << "人";
-                continue;
-            }
-            if (j == light_x && i == light_y)
-            {
-                del_block[i]++;
+            int Tmp = Check_Object(i,j);
+            if (Tmp == 1) {
                 std::cout << "灯";
-                continue;
-            }
-            if (j == monster_x && i == monster_y)
-            {
-                del_block[i]++;
+                del_block[i] ++;
+            } else 
+            if (Tmp == 2) {
                 std::cout << "怪";
-                continue;
-            }
-            if (j == door_x && i == door_y)
-            {
-                del_block[i]++;
+                del_block[i] ++;
+            } else
+            if (Tmp == 3) {
                 std::cout << "门";
-                continue;
-            }
-            if (j == stairs_x && i == stairs_y)
-            {
-                del_block[i]++;
+                del_block[i] ++;
+            } else
+            if (Tmp == 4) {
                 std::cout << "梯";
-                continue;
+                del_block[i] ++;
+            } else 
+            if (Tmp == 0) {
+                std::cout << "人";
+                del_block[i] ++;
+            } else {
+                if (j == width -1 - del_block[i]) {
+                    std::cout << "|" << std::endl;
+                    j = width;
+                    continue;
+                } else std::cout << " ";
             }
-            if (j == width - 1 - del_block[i])
-            {
-                std::cout << "|" << std::endl;
-                j = width;
-                continue;
-            }
-            std::cout << " ";
         }
     }
     for (int i = 0; i < width; ++i)
@@ -80,37 +94,33 @@ void Map::Update_Map() {
     memset(del_block,0,sizeof(del_block));
     for (int i = 0; i >= 0; --i) {
         for (int j = 0; j < width; ++j) {
-            if (j == human_x && i == human_y) {
-                del_block[i] ++;
-                std::cout << "人";
-                continue;
-            } 
-            if (j == light_x && i ==  light_y) {
-                del_block[i] ++;
+            int Tmp = Check_Object(i,j);
+            if (Tmp == 1) {
                 std::cout << "灯";
-                continue;
-            }
-            if (j == monster_x && i == monster_y) {
                 del_block[i] ++;
+            } else 
+            if (Tmp == 2) {
                 std::cout << "怪";
-                continue;
-            }
-            if (j == door_x && i == door_y) {
                 del_block[i] ++;
+            } else
+            if (Tmp == 3) {
                 std::cout << "门";
-                continue;
-            }
-            if (j == stairs_x && i == stairs_y) {
                 del_block[i] ++;
+            } else
+            if (Tmp == 4) {
                 std::cout << "梯";
-                continue;
+                del_block[i] ++;
+            } else 
+            if (Tmp == 0) {
+                std::cout << "人";
+                del_block[i] ++;
+            } else {
+                if (j == width -1 - del_block[i]) {
+                    std::cout << "|" << std::endl;
+                    j = width;
+                    continue;
+                } else std::cout << " ";
             }
-            if (j == width -1 - del_block[i]) {
-                std::cout << "|" << std::endl;
-                j = width;
-                continue;
-            }
-            std::cout << " ";
         }
     }
     for (int i = 0;  i < width; ++i)
@@ -120,7 +130,7 @@ void Map::Update_Map() {
 
 void Map::Change_Human_Position(int dis)
 {
-    human_x += dis;
+    this->people.second += dis;
     this->Update_Map();
 }
 

@@ -3,20 +3,7 @@
 
 #include<vector>
 #include<string>
-
-class map_data
-{
-    public:
-        int floor;
-        std::pair<int, int> people;
-        std::vector<std::pair<int, int>> light;
-        std::vector<std::pair<int, int>> monster;
-        std::vector<std::pair<int, int>> door;
-        std::vector<std::pair<int, int>> stair;
-        std::vector<std::pair<int, int>> object;
-
-        map_data() = default;
-};
+#include "./map.h"
 
 class IO
 {
@@ -25,8 +12,8 @@ class IO
 
     public:
         IO() = default;
-        bool read_map(map_data &data);
-        bool write_map(map_data &data);
+        bool read_map(Map &data);
+        bool write_map(Map &data);
         // bool read_attributes();
         // bool write_attributes();
 };

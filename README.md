@@ -8,9 +8,13 @@
 │  README.md
 │
 ├─.vscode
+│      configurationCache.log
 │      c_cpp_properties.json
+│      dryrun.log
 │      launch.json
 │      settings.json
+│      targets.log
+│      tasks.json
 │
 ├─include
 │      attributes.h

@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <vector>
 #include "../include/IO.h"
+#include "../include/map.h"
 
 std::string IO::get_file_name(int floor)
 {
@@ -14,7 +15,7 @@ std::string IO::get_file_name(int floor)
     return result;
 }
 
-bool IO::write_map(map_data &data)
+bool IO::write_map(Map &data)
 {
     std::ofstream out_stream;
     std::string file_name = get_file_name(data.floor);
@@ -53,7 +54,7 @@ bool IO::write_map(map_data &data)
     }
 }
 
-bool IO::read_map(map_data &data)
+bool IO::read_map(Map &data)
 {
     std::ifstream in_stream;
     std::string file_name = get_file_name(data.floor);
