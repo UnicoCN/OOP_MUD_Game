@@ -4,6 +4,7 @@
 #include "include/IO.h"
 #include "include/play_music.h"
 #include "include/environment_setting.h"
+#include "include/food.h"
 
 int main() {
     start_menu Menu;
@@ -29,7 +30,7 @@ int main() {
     }
     else if(choice == 1)
     {
-        IO read;
+        /*IO read;
         Map test;
         test.floor = 7;
         read.read_map(test);
@@ -37,6 +38,10 @@ int main() {
         auto it = test.light.begin();
         for(; it != test.light.end(); it++)
             printf("%d %d\n", (*it).first, (*it).second);
+        while(1);*/
+
+        apple test;
+        test.show();
         while(1);
     }
     return 0;

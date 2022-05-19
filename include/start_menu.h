@@ -1,5 +1,5 @@
-#ifndef START_MENU_H
-#define START_MENU_H
+#ifndef _START_MENU_H
+#define _START_MENU_H
 
 #include<string>
 
