@@ -115,7 +115,7 @@ bool IO::read_map(Map &data)
                 continue;
             }
 
-            if (type == "Stair")
+            if (type == "Stair:")
             {
                 while (1)
                 {

@@ -23,7 +23,6 @@ void start_menu::print_pic()
 
 void start_menu::print_menu()
 {
-    SetConsoleOutputCP(65001);
     for(int i = 0; i < 4; ++i)
     {
         if(i == choice)
@@ -47,7 +46,6 @@ void start_menu::reprint_menu()
 
 int start_menu::dead_lock()
 {
-    system("mode con cols=200 lines=200");
     print_pic();
     print_menu();
     return input_check();

@@ -21,6 +21,8 @@
 │      IO.h
 │      map.h
 │      start_menu.h
+|	   environment_setting.h(new)
+|	   play_music.h(new)
 │
 ├─pic
 │      pic.txt
@@ -33,6 +35,8 @@
         IO.cpp
         map.cpp
         start_menu.cpp
+        environment_setting.cpp(new)
+        play_music.cpp(new)
 ````
 
 ##### Compile & Run
