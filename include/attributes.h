@@ -28,6 +28,8 @@ public:
     void Add_Props(std::string w, bool is_add); // 修改道具
     void Change_Blood(int num); // 更改血量
     void Change_Starveness(int num); // 更改饥饿值
+    bool read_attr();
+    bool write_attr();
 };
 
 #endif

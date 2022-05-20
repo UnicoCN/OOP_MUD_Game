@@ -13,13 +13,9 @@ About_US as;
 Attributes attr;
 
 int main() {
-    
-    environment_setting();
-    
+    environment_setting();    
     play_music test;
     test.start_play();
-
     Menu.Choose();
-    
     return 0;
 }

@@ -8,7 +8,7 @@ make.exe: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu May 19 23:13:51 2022
+# Make data base, printed on Fri May 20 15:55:33 2022
 
 # Variables
 
@@ -20,6 +20,8 @@ GNUMAKEFLAGS :=
 ?F = $(notdir $?)
 # environment
 QTMSBUILD = C:\Users\IvanH\AppData\Local\QtMsBuild
+# environment
+WSLENV = WT_SESSION::WT_PROFILE_ID
 # default
 .SHELLFLAGS := -c
 # makefile
@@ -51,7 +53,7 @@ ONEDRIVE = C:\Users\IvanH\OneDrive
 # environment
 PUBLIC = C:\Users\Public
 # environment
-PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # environment
@@ -63,19 +65,21 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-de2c3a5e-52e3-4633-9646-e8605b850620-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-3f2a967e-fcfa-4051-9917-a0a604f8ee5d-sock
 # environment
-VSCODE_CWD = D:\Microsoft VS Code
+VSCODE_CWD = E:\OOP_MUD_Game
 # default
 MAKE_HOST := Windows32
 # environment
-PATH = C:\Program Files\Eclipse Adoptium\jdk-17.0.1.12-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk-15.0.1\bin;D:\Vim\vim82;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;D:\Xilinx\Vivado\2017.4\bin;D:\texlive\2021\bin\win32;C:\ProgramData\chocolatey\bin;C:\Users\IvanH\AppData\Local\Programs\Python\Python38\;D:\Desktop\CTF\sqlmap-dev;C:\Program Files\Java\jdk-15.0.2\bin;C:\Program Files\Java\jdk-15.0.2\jre\bin;C:\cmder;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\IvanH\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\IvanH\AppData\Local\Programs\Python\Python38\;C:\Users\IvanH\AppData\Local\Microsoft\WindowsApps;C:\Users\IvanH\AppData\Local\GitHubDesktop\bin;C:\MinGW\bin;D:\modeltech64_10.4\win64;D:\Vim\vim82;C:\Users\IvanH\.dotnet\tools;D:\texlive\2021\bin\win32;D:\Microsoft VS Code\bin;D:\Desktop\CTF\sqlmap-dev;D:\CLion 2021.2.3\bin;;D:\cmder;C:\Program Files\MySQL\MySQL Server 8.0\bin;
+PATH = C:\Program Files\Eclipse Adoptium\jdk-17.0.1.12-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk-15.0.1\bin;D:\Vim\vim82;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;D:\Xilinx\Vivado\2017.4\bin;D:\texlive\2021\bin\win32;C:\ProgramData\chocolatey\bin;C:\Users\IvanH\AppData\Local\Programs\Python\Python38\;D:\Desktop\CTF\sqlmap-dev;C:\Program Files\Java\jdk-15.0.2\bin;C:\Program Files\Java\jdk-15.0.2\jre\bin;C:\cmder;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\IvanH\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\IvanH\AppData\Local\Microsoft\WindowsApps;C:\Users\IvanH\AppData\Local\GitHubDesktop\bin;C:\MinGW\bin;D:\modeltech64_10.4\win64;C:\Users\IvanH\.dotnet\tools;D:\Microsoft VS Code\bin;D:\CLion 2021.2.3\bin;D:\cmder
 # environment
 ONLINESERVICES = Online Services
 # environment
 COMMONPROGRAMW6432 = C:\Program Files\Common Files
 # environment
 ZES_ENABLE_SYSMAN = 1
+# environment
+LC_ALL = C
 # environment
 CHOCOLATEYLASTPATHUPDATE = 132767680797709090
 # environment
@@ -97,7 +101,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_6812_RONOVIPCZSNZPHYU
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_18528_TUNBGCAPPIMKDGEP
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -113,6 +117,8 @@ ASL.LOG = Destination=file
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
+WT_SESSION = 26eebe09-21a2-4acd-8603-0984e9799c5a
+# environment
 USERNAME = IvanH
 # environment
 MGLS_LICENSE_FILE = D:\modeltech64_10.4\win64\LICENSE.TXT
@@ -120,6 +126,8 @@ MGLS_LICENSE_FILE = D:\modeltech64_10.4\win64\LICENSE.TXT
 KMP_DUPLICATE_LIB_OK = TRUE
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+VSCODE_CLI = 1
 # environment
 VSCODE_CODE_CACHE_PATH = C:\Users\IvanH\AppData\Roaming\Code\CachedData\c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
@@ -155,7 +163,7 @@ PROGRAMFILES(X86) = C:\Program Files (x86)
 # environment
 LOCALAPPDATA = C:\Users\IvanH\AppData\Local
 # environment
-PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+PSMODULEPATH = C:\Users\IvanH\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
 # default
 MAKE_COMMAND := make.exe
 # environment
@@ -197,6 +205,8 @@ APPDATA = C:\Users\IvanH\AppData\Roaming
 # environment
 TEMP = C:\Users\IvanH\AppData\Local\Temp
 # environment
+WT_PROFILE_ID = {61c54bbd-c2c6-5271-96e7-009a87ff44bf}
+# environment
 COMSPEC = C:\WINDOWS\system32\cmd.exe
 # default
 MAKEFILES := 
@@ -207,7 +217,7 @@ VS160COMCOMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio\2019\Communit
 # environment
 MKL_SERIAL = YES
 # environment
-LC_ALL = C
+ELECTRON_NO_ATTACH_CONSOLE = 1
 # automatic
 ^F = $(notdir $^)
 # default
@@ -227,11 +237,11 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-VSCODE_PID = 6812
+VSCODE_PID = 18528
 # environment
 USERDOMAIN_ROAMINGPROFILE = LAPTOP-CCFHHGVA
 # variable set hash-table stats:
-# Load=109/1024=11%, Rehash=0, Collisions=18/133=14%
+# Load=114/1024=11%, Rehash=0, Collisions=20/138=14%
 
 # Pattern-specific Variable Values
 
@@ -239,9 +249,9 @@ USERDOMAIN_ROAMINGPROFILE = LAPTOP-CCFHHGVA
 
 # Directories
 
-# . (key e:/OOP_MUD_Game, mtime 1652973057): 12 files, no impossibilities.
+# . (key e:/OOP_MUD_Game, mtime 1653024227): 13 files, no impossibilities.
 
-# 12 files, no impossibilities in 1 directories.
+# 13 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -402,9 +412,9 @@ One_Way_Out.exe: main.cpp src/start_menu.cpp src/attributes.cpp src/map.cpp src/
 # strcache buffers: 1 (0) / strings = 34 / storage = 417 B / avg = 12 B
 # current buf: size = 8162 B / used = 417 B / count = 34 / avg = 12 B
 
-# strcache performance: lookups = 43 / hit rate = 20%
+# strcache performance: lookups = 44 / hit rate = 22%
 # hash-table stats:
-# Load=34/8192=0%, Rehash=0, Collisions=1/43=2%
-# Finished Make data base on Thu May 19 23:13:51 2022
+# Load=34/8192=0%, Rehash=0, Collisions=1/44=2%
+# Finished Make data base on Fri May 20 15:55:33 2022
 
  

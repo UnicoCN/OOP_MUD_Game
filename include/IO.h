@@ -14,8 +14,6 @@ class IO
         IO() = default;
         bool read_map(Map &data);
         bool write_map(Map &data);
-        // bool read_attributes();
-        // bool write_attributes();
 };
 
 #endif

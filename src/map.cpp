@@ -9,7 +9,7 @@
 #include "../include/start_menu.h"
 
 extern start_menu Menu;
-
+extern Attributes attr;
 /*
     Check_Object
     -1 没有物品
@@ -157,6 +157,7 @@ void Map::Listen_Keyboard()
             case 27:
                 IO io_save;
                 io_save.write_map(*this);
+                attr.write_attr();
                 system("cls");
                 Menu.Choose();
                 break;
