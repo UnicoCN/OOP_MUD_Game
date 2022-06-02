@@ -21,16 +21,34 @@ extern Attributes attr;
     （待添加）
 */
 
+int collide;
+
 int Map::Check_Object(int x, int y) {
-    if (x == this->people.first && y == this->people.second) return 0;
+    bool flag_0 = false;
+    bool flag_1 = false;
+    bool flag_2 = false;
+    bool flag_3 = false;
+    bool flag_4 = false;
+    collide = -1;
+    if (x == this->people.first && y == this->people.second) flag_0 = true;
     for (auto p = this->light.begin(); p != this->light.end(); ++p)
-        if (x == p->first && y == p->second) return 1;
+        if (x == p->first && y == p->second) flag_1 = true;
     for (auto p = this->monster.begin(); p != this->monster.end(); ++p)
-        if (x == p->first && y == p->second) return 2;
+        if (x == p->first && y == p->second) flag_2 = true;
     for (auto p = this->door.begin(); p != this->door.end(); ++p)
-        if (x == p->first && y == p->second) return 3;
+        if (x == p->first && y == p->second) flag_3 = true;
     for (auto p = this->stair.begin(); p != this->stair.end(); ++p)
-        if (x == p->first && y == p->second) return 4;
+        if (x == p->first && y == p->second) flag_4 = true;
+
+    if (flag_0 && flag_1) collide = 1;
+        else if (flag_0 && flag_2) collide = 2;
+            else if (flag_0 && flag_3) collide = 3;
+                else if (flag_0 && flag_4) collide = 4;
+    if (flag_0) return 0;
+        else if (flag_1) return 1;
+            else if (flag_2) return 2;
+                else if (flag_3) return 3;
+                    else if (flag_4) return 4;
     return -1;
 }
 
@@ -117,6 +135,9 @@ void Map::Update_Map() {
             } else 
             if (Tmp == 0) {
                 std::cout << "人";
+                if (collide != -1) {
+                    std::cout << " ";
+                }
                 del_block[i] ++;
             } else {
                 if (j == width -1 - del_block[i]) {
@@ -134,7 +155,7 @@ void Map::Update_Map() {
 
 void Map::Change_Human_Position(int dis)
 {
-    this->people.second += dis;
+    if (this->people.second + dis < width - 5 && this->people.second + dis > 0) this->people.second += dis;
     this->Update_Map();
 }
 
