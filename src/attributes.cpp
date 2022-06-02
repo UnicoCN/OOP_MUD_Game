@@ -1,12 +1,13 @@
-#include<iostream>
-#include<windows.h>
-#include<string>
-#include<fstream>
+#include <iostream>
+#include <windows.h>
+#include <string>
+#include <fstream>
 
 #include "../include/environment_setting.h"
 #include "../include/attributes.h"
 
-Attributes::Attributes() {
+Attributes::Attributes()
+{
     Weapons_Num = 1;
     Props_Num = 1;
     Weapons[0] = "普通的木棍";
@@ -15,17 +16,20 @@ Attributes::Attributes() {
     Starveness = 100;
 }
 
-void Attributes::Show_Blood() {
+void Attributes::Show_Blood()
+{
     SetConsoleOutputCP(65001);
-    std::cout << "血量: " << Blood << std::endl; 
+    std::cout << "血量: " << Blood << std::endl;
 }
 
-void Attributes::Show_Starveness() {
+void Attributes::Show_Starveness()
+{
     SetConsoleOutputCP(65001);
-    std::cout << "饥饿值: " << Starveness << std::endl; 
+    std::cout << "饥饿值: " << Starveness << std::endl;
 }
 
-void Attributes::Show_Weapons() {
+void Attributes::Show_Weapons()
+{
     SetConsoleOutputCP(65001);
     std::cout << "武器: ";
     for (int i = 0; i < Weapons_Num; ++i)
@@ -33,7 +37,8 @@ void Attributes::Show_Weapons() {
     std::cout << std::endl;
 }
 
-void Attributes::Show_Props() {
+void Attributes::Show_Props()
+{
     SetConsoleOutputCP(65001);
     std::cout << "物品: ";
     for (int i = 0; i < Props_Num; ++i)
@@ -41,28 +46,32 @@ void Attributes::Show_Props() {
     std::cout << std::endl;
 }
 
-void Attributes::Show_All() {
+void Attributes::Show_All()
+{
     this->Show_Blood();
     this->Show_Starveness();
     this->Show_Weapons();
     this->Show_Props();
 }
 
-void Attributes::Change_Blood(int num) {
-
+void Attributes::Change_Blood(int num)
+{
+    this->Blood += num;
 }
 
-void Attributes::Change_Starveness(int num) {
-
+void Attributes::Change_Starveness(int num)
+{
+    this->Starveness += num;
 }
 
-void Attributes::Add_Weapons(std::string w, bool is_add) {
-
+void Attributes::Add_Weapons(std::string w, bool is_add)
+{
 }
 
-void Attributes::Add_Props(std::string w, bool is_add) {
-
+void Attributes::Add_Props(std::string w, bool is_add)
+{
 }
+
 
 bool Attributes::read_attr(int option) {
     std::ifstream in_stream;
@@ -102,8 +111,9 @@ bool Attributes::read_attr(int option) {
                 while (1)
                 {
                     in_stream >> _Weapons;
-                    if (_Weapons == "###") break;
-                    Weapons_Num ++;
+                    if (_Weapons == "###")
+                        break;
+                    Weapons_Num++;
                     Weapons[Weapons_Num - 1] = _Weapons;
                 }
                 continue;
@@ -114,8 +124,9 @@ bool Attributes::read_attr(int option) {
                 while (1)
                 {
                     in_stream >> _Props;
-                    if (_Props == "###") break;
-                    Props_Num ++;
+                    if (_Props == "###")
+                        break;
+                    Props_Num++;
                     Props[Props_Num - 1] = _Props;
                 }
                 continue;
@@ -147,7 +158,7 @@ bool Attributes::write_attr(int option) {
         out_stream << "Props:" << std::endl;
         for (int i = 0; i < Props_Num; ++i)
             out_stream << Props[i] << std::endl;
-        out_stream << "###" << std::endl;    
+        out_stream << "###" << std::endl;
         out_stream.close();
         return true;
     }
