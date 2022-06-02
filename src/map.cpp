@@ -144,6 +144,7 @@ void Map::Update_Map()
     SetConsoleCursorPosition(hOut, pos);
     int del_block[5]; // 处理中文的字节占用问题
     memset(del_block, 0, sizeof(del_block));
+    int tmp_block = 0;
     for (int i = 0; i >= 0; --i)
     {
         for (int j = 0; j < width; ++j)
@@ -175,12 +176,13 @@ void Map::Update_Map()
                 if (collide != -1)
                 {
                     std::cout << " ";
+                    tmp_block = 1;
                 }
                 del_block[i]++;
             }
             else
             {
-                if (j == width - 1 - del_block[i])
+                if (j == width - 1 - del_block[i] - tmp_block)
                 {
                     std::cout << "|" << std::endl;
                     j = width;
