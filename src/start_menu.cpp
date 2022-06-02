@@ -93,6 +93,7 @@ void start_menu::Choose()
     if (choice == 0)
     {
         system("cls");
+        attr.read_attr(0);
         attr.Show_All();
         IO io_ini;
         io_ini.read_map(m, 0);
