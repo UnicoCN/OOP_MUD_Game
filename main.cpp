@@ -6,13 +6,17 @@
 #include "include/environment_setting.h"
 #include "include/about_us.h"
 #include "include/food.h"
+#include "include/interact.h"
+#include <ctime>
 
 start_menu Menu;
 Map m;
 About_US as;
 Attributes attr;
+interact inter;
 
 int main() {
+    srand((unsigned)time(NULL));
     environment_setting();    
     play_music test;
     test.start_play();

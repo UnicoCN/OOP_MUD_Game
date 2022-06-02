@@ -7,9 +7,11 @@
 #include "../include/attributes.h"
 #include "../include/IO.h"
 #include "../include/start_menu.h"
+#include "../include/interact.h"
 
 extern start_menu Menu;
 extern Attributes attr;
+extern interact inter;
 /*
     Check_Object
     -1 没有物品
@@ -232,22 +234,25 @@ void Map::Listen_Keyboard()
             ch = _getch();
             switch (ch)
             {
-            case 75:
-                this->Change_Human_Position(-1);
-                break;
-            case 77:
-                this->Change_Human_Position(1);
-                break;
-            case 27:
-                IO io_save;
-                io_save.write_map(*this);
-                attr.write_attr();
-                system("cls");
-                Menu.Choose();
-                break;
-            default:
-                this->Change_Human_Position(0);
-                break;
+                case 13:
+                    inter.start_interact(collide);
+                    break;
+                case 75:
+                    this->Change_Human_Position(-1);
+                    break;
+                case 77:
+                    this->Change_Human_Position(1);
+                    break;
+                case 27:
+                    IO io_save;
+                    io_save.write_map(*this);
+                    attr.write_attr();
+                    system("cls");
+                    Menu.Choose();
+                    break;
+                default:
+                    this->Change_Human_Position(0);
+                    break;
             }
         }
     }
