@@ -64,9 +64,11 @@ void Attributes::Add_Props(std::string w, bool is_add) {
 
 }
 
-bool Attributes::read_attr() {
+bool Attributes::read_attr(int option) {
     std::ifstream in_stream;
-    std::string file_name = ".\\save\\save_attr.txt";
+    std::string file_name;
+    if (option == 1) file_name = ".\\save\\save_attr.txt";
+        else if (option == 0) file_name = ".\\new\\new_attr.txt";
     in_stream.open(file_name);
     if (!in_stream)
         return false;
@@ -77,6 +79,8 @@ bool Attributes::read_attr() {
         unsigned long _Starveness;
         std::string _Weapons;
         std::string _Props;
+        Weapons_Num = 0;
+        Props_Num = 0;
         while (in_stream >> type)
         {
             if (type == "Blood:")
@@ -121,9 +125,11 @@ bool Attributes::read_attr() {
     }
 }
 
-bool Attributes::write_attr() {
+bool Attributes::write_attr(int option) {
     std::ofstream out_stream;
-    std::string file_name = ".\\save\\save_attr.txt";
+    std::string file_name;
+    if (option == 1) file_name = ".\\save\\save_attr.txt";
+        else if (option == 0) file_name = ".\\new\\new_attr.txt";
     out_stream.open(file_name);
     if (!out_stream)
         return false;

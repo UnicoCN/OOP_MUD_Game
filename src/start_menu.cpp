@@ -95,7 +95,7 @@ void start_menu::Choose()
         system("cls");
         attr.Show_All();
         IO io_ini;
-        io_ini.read_map(m);
+        io_ini.read_map(m, 0);
         m.Show_Floor();
         m.Draw_Map();
         m.Listen_Keyboard();
@@ -103,10 +103,10 @@ void start_menu::Choose()
     else if (choice == 1)
     {
         system("cls");
-        attr.read_attr();
+        attr.read_attr(1);
         attr.Show_All();
         IO io_continue;
-        io_continue.read_map(m);
+        io_continue.read_map(m, 1);
         m.Show_Floor();
         m.Draw_Map();
         m.Listen_Keyboard();

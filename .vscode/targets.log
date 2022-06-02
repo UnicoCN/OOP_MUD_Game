@@ -8,7 +8,7 @@ make.exe: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jun 02 20:10:50 2022
+# Make data base, printed on Thu Jun 02 21:07:04 2022
 
 # Variables
 
@@ -143,7 +143,7 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # makefile (from 'Makefile', line 2)
-include_file = include/start_menu.h include/attributes.h include/map.h include/IO.h include/play_music.h include/environment_setting.h include/about_us.h include/food.h
+include_file = include/*.h
 # default
 MAKE_VERSION := 4.2.1
 # makefile
@@ -175,7 +175,7 @@ VSCODE_IPC_HOOK = \\.\pipe\2d48f20f2f755c696283148fe84d806b-1.67.2-main-sock
 # environment
 HOMEPATH = \Users\IvanH
 # makefile (from 'Makefile', line 1)
-src_file = main.cpp src/start_menu.cpp src/attributes.cpp src/map.cpp src/IO.cpp src/play_music.cpp src/environment_setting.cpp src/about_us.cpp src/food.cpp 
+src_file = main.cpp src/*.cpp
 # environment
 COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
 # environment
@@ -243,9 +243,11 @@ USERDOMAIN_ROAMINGPROFILE = LAPTOP-CCFHHGVA
 
 # Directories
 
-# . (key e:/OOP_MUD_Game, mtime 1654171763): 13 files, no impossibilities.
+# include (key e:/OOP_MUD_Game/include, mtime 1654171724): 10 files, no impossibilities.
+# . (key e:/OOP_MUD_Game, mtime 1654175106): 14 files, no impossibilities.
+# src (key e:/OOP_MUD_Game/src, mtime 1654171724): 10 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 34 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -292,7 +294,7 @@ include/play_music.h:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-02 20:08:44
+#  Last modified 2022-06-02 21:04:58
 #  File has been updated.
 #  Successfully updated.
 
@@ -388,7 +390,7 @@ src/food.cpp:
 #  Modification time never checked.
 #  File has not been updated.
 
-One_Way_Out.exe: main.cpp src/start_menu.cpp src/attributes.cpp src/map.cpp src/IO.cpp src/play_music.cpp src/environment_setting.cpp src/about_us.cpp src/food.cpp include/start_menu.h include/attributes.h include/map.h include/IO.h include/play_music.h include/environment_setting.h include/about_us.h include/food.h
+One_Way_Out.exe: main.cpp src/play_music.cpp src/food.cpp src/attributes.cpp src/IO.cpp src/environment_setting.cpp src/start_menu.cpp src/map.cpp src/about_us.cpp include/start_menu.h include/map.h include/about_us.h include/play_music.h include/food.h include/attributes.h include/IO.h include/environment_setting.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -403,12 +405,12 @@ One_Way_Out.exe: main.cpp src/start_menu.cpp src/attributes.cpp src/map.cpp src/
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 34 / storage = 417 B / avg = 12 B
-# current buf: size = 8162 B / used = 417 B / count = 34 / avg = 12 B
+# strcache buffers: 1 (0) / strings = 51 / storage = 617 B / avg = 12 B
+# current buf: size = 8162 B / used = 617 B / count = 51 / avg = 12 B
 
-# strcache performance: lookups = 44 / hit rate = 22%
+# strcache performance: lookups = 67 / hit rate = 23%
 # hash-table stats:
-# Load=34/8192=0%, Rehash=0, Collisions=1/44=2%
-# Finished Make data base on Thu Jun 02 20:10:50 2022
+# Load=51/8192=1%, Rehash=0, Collisions=3/67=4%
+# Finished Make data base on Thu Jun 02 21:07:04 2022
 
  

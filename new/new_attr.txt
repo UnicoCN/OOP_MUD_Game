@@ -1,0 +1,10 @@
+Blood:
+100
+Starveness:
+100
+Weapons:
+普通的木棍
+###
+Props:
+一把破旧的钥匙
+###

@@ -242,8 +242,8 @@ void Map::Listen_Keyboard()
                 break;
             case 27:
                 IO io_save;
-                io_save.write_map(*this);
-                attr.write_attr();
+                io_save.write_map(*this, 1);
+                attr.write_attr(1);
                 system("cls");
                 Menu.Choose();
                 break;

@@ -8,12 +8,12 @@
 class IO
 {
     private:
-        std::string get_file_name(int floor);
+        std::string get_file_name(int floor, int option);
 
     public:
         IO() = default;
-        bool read_map(Map &data);
-        bool write_map(Map &data);
+        bool read_map(Map &data, int option);
+        bool write_map(Map &data, int option);
 };
 
 #endif

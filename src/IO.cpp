@@ -5,20 +5,22 @@
 #include "../include/IO.h"
 #include "../include/map.h"
 
-std::string IO::get_file_name(int floor)
+std::string IO::get_file_name(int floor, int option)
 {
     char *temp = new char[5];
     ltoa(floor, temp, 10);
     std::string test = temp;
     delete[] temp;
-    std::string result = ".\\save\\save" + test + ".txt";
+    std::string result;
+    if (option == 1) result = ".\\save\\save" + test + ".txt";
+        else if (option == 0) result = ".\\new\\new_map.txt";
     return result;
 }
 
-bool IO::write_map(Map &data)
+bool IO::write_map(Map &data, int option)
 {
     std::ofstream out_stream;
-    std::string file_name = get_file_name(data.floor);
+    std::string file_name = get_file_name(data.floor, option);
     out_stream.open(file_name);
     if (!out_stream)
         return false;
@@ -54,10 +56,14 @@ bool IO::write_map(Map &data)
     }
 }
 
-bool IO::read_map(Map &data)
+bool IO::read_map(Map &data, int option)
 {
+    data.light.clear();
+    data.door.clear();
+    data.monster.clear();
+    data.stair.clear();
     std::ifstream in_stream;
-    std::string file_name = get_file_name(data.floor);
+    std::string file_name = get_file_name(data.floor, option);
     in_stream.open(file_name);
     if (!in_stream)
         return false;
