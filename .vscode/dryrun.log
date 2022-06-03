@@ -1,5 +1,5 @@
-make.exe --dry-run --keep-going --print-directory
+make.exe --dry-run --always-make --keep-going --print-directory
 make.exe: Entering directory 'e:/OOP_MUD_Game'
-make.exe: 'One_Way_Out.exe' is up to date.
+g++ main.cpp src/start_menu.cpp src/attributes.cpp src/map.cpp src/IO.cpp src/play_music.cpp src/environment_setting.cpp src/about_us.cpp src/interact.cpp -o One_Way_Out.exe -lwinmm
 make.exe: Leaving directory 'e:/OOP_MUD_Game'
  

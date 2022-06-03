@@ -5,6 +5,11 @@
 
 #include "../include/environment_setting.h"
 #include "../include/attributes.h"
+#include "../include/IO.h"
+
+
+extern Map m;
+extern Attributes attr;
 
 Attributes::Attributes()
 {
@@ -54,14 +59,49 @@ void Attributes::Show_All()
     this->Show_Props();
 }
 
+void Attributes::Re_Show_All() {
+    HANDLE hOut;
+    COORD pos = {0, 0};
+    hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleCursorPosition(hOut, pos);
+    std::string blank = "";
+    for (int i = 0; i < 150; ++i)
+        blank += " ";
+    std::cout << blank << std::endl; 
+    std::cout << blank << std::endl;
+    std::cout << blank << std::endl;
+    std::cout << blank << std::endl;
+    pos = {0,0};
+    hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleCursorPosition(hOut, pos);
+    Show_All();
+}
+
 void Attributes::Change_Blood(int num)
 {
-    this->Blood += num;
+    if (num < 0) {
+        if (this->Blood <= abs(num)) {
+            this->Blood = 0;
+            system("cls");
+            attr.read_attr(0);
+            attr.Show_All();
+            IO io_ini;
+            io_ini.read_map(m, 0);
+            m.Show_Floor();
+            m.Draw_Map();
+            m.Listen_Keyboard();
+        } else this->Blood += num;
+    } else this->Blood += num;
 }
 
 void Attributes::Change_Starveness(int num)
 {
-    this->Starveness += num;
+    if (num < 0) {
+        if (this->Starveness < abs(num)) {
+            this->Starveness = 0;
+            Change_Blood(-10);
+        } else this->Starveness += num;
+    } else this->Starveness += num;
 }
 
 void Attributes::Add_Weapons(std::string w, bool is_add)

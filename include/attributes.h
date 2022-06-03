@@ -24,6 +24,7 @@ public:
     void Show_Weapons(); // 显示武器
     void Show_Props(); // 显示道具
     void Show_All();
+    void Re_Show_All();
     void Add_Weapons(std::string w, bool is_add); // 修改武器
     void Add_Props(std::string w, bool is_add); // 修改道具
     void Change_Blood(int num); // 更改血量

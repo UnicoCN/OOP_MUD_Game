@@ -1,6 +1,7 @@
 #include "../include/interact.h"
 #include "../include/attributes.h"
 
+
 extern Attributes attr;
 
 void interact::start_interact(int choice)
@@ -103,8 +104,7 @@ void interact::interact_with_door()
             attr.Change_Blood(10);
             break;
     }
-    
-    attr.Show_All();
+    attr.Re_Show_All();
 }
 
 void interact::interact_with_monster()
