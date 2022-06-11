@@ -7,15 +7,6 @@
 │  Makefile
 │  README.md
 │
-├─.vscode
-│      configurationCache.log
-│      c_cpp_properties.json
-│      dryrun.log
-│      launch.json
-│      settings.json
-│      targets.log
-│      tasks.json
-│
 ├─include
 │      about_us.h
 │      attributes.h
@@ -50,8 +41,15 @@
 
 - Windows
 
+##### Compile
+
 ````bash
 make
-.\One_Way_Out.exe
 ````
+
+##### Run
+
+```
+点击One_Way_Out.exe运行即可
+```
 

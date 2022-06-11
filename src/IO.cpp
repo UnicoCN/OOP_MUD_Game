@@ -13,7 +13,7 @@ std::string IO::get_file_name(int floor, int option)
     delete[] temp;
     std::string result;
     if (option == 1) result = ".\\save\\save" + test + ".txt";
-        else if (option == 0) result = ".\\new\\new_map.txt";
+        else if (option == 0) result = ".\\new\\new_map" + test + ".txt";
     return result;
 }
 
@@ -51,6 +51,16 @@ bool IO::write_map(Map &data, int option)
             out_stream << (*it).first << ' ' << (*it).second << std::endl;
         out_stream << -1 << ' ' << -1 << std::endl;
 
+        out_stream << "DoorFlag:" << std::endl;
+        for (auto it = data.door_flag.begin(); it != data.door_flag.end(); ++it)
+            out_stream << (*it) << std::endl;
+        out_stream << -1 << std::endl;
+
+        out_stream << "MonsterFlag:" << std::endl;
+        for (auto it = data.monster_flag.begin(); it != data.monster_flag.end(); ++it)
+            out_stream << (*it) << std::endl;
+        out_stream << -1 << std::endl;
+
         out_stream.close();
         return true;
     }
@@ -62,6 +72,9 @@ bool IO::read_map(Map &data, int option)
     data.door.clear();
     data.monster.clear();
     data.stair.clear();
+    data.monster_flag.clear();
+    data.door_flag.clear();
+    
     std::ifstream in_stream;
     std::string file_name = get_file_name(data.floor, option);
     in_stream.open(file_name);
@@ -133,6 +146,31 @@ bool IO::read_map(Map &data, int option)
                 }
                 continue;
             }
+
+             if (type == "DoorFlag:")
+            {
+                while (1)
+                {
+                    in_stream >> x;
+                    if (x == -1)
+                        break;
+                    data.door_flag.push_back(x);
+                }
+                continue;
+            }
+
+            if (type == "MonsterFlag:")
+            {
+                while (1)
+                {
+                    in_stream >> x;
+                    if (x == -1)
+                        break;
+                    data.monster_flag.push_back(x);
+                }
+                continue;
+            }
+
         }
         return true;
     }

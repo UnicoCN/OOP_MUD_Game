@@ -42,11 +42,11 @@ int Map::Check_Object(int x, int y)
     for (auto p = this->light.begin(); p != this->light.end(); ++p)
         if (x == p->first && y == p->second)
             flag_1 = true;
-    for (auto p = this->monster.begin(); p != this->monster.end(); ++p)
-        if (x == p->first && y == p->second)
+    for (int i = 0; i < this->monster.size(); ++i)
+        if (x == monster[i].first && y == monster[i].second && monster_flag[i])
             flag_2 = true;
-    for (auto p = this->door.begin(); p != this->door.end(); ++p)
-        if (x == p->first && y == p->second)
+    for (int i = 0; i < this->door.size(); ++i)
+        if (x == door[i].first && y == door[i].second)
             flag_3 = true;
     for (auto p = this->stair.begin(); p != this->stair.end(); ++p)
         if (x == p->first && y == p->second)
@@ -206,14 +206,20 @@ void Map::Update_Map()
             break;
         case 2:
             std::cout << "一场战斗在所难免" << std::endl;
+            inter.start_interact(2, 0);
+            for (int i = 0; i < monster.size(); ++i)
+                if (people.first == monster[i].first && people.second == monster[i].second)
+                    monster_flag[i] = 0;
             break;
         case 3:
             std::cout << "要进去看看吗？" << std::endl;
             break;
         case 4:
             std::cout << "往上还是往下？还是···留在这里？" << std::endl;
+            std::cout << "j往下，k往上,嘻嘻:)" << std::endl;
             break;
         default:
+            std::cout << "                                  " << std::endl;
             std::cout << "                                  " << std::endl;
             break;
     }
@@ -236,9 +242,22 @@ void Map::Listen_Keyboard()
             ch = _getch();
             switch (ch)
             {
-
+                case 106:
+                    if(collide == 4) inter.start_interact(collide, 1);
+                    break;
+                case 107:
+                    if (collide == 4) inter.start_interact(collide, 0);
+                    break;
                 case 13:
-                    inter.start_interact(collide);
+                    if (collide == 3)
+                    {
+                        for(int i = 0; i < door.size(); ++i)
+                            if (people.first == door[i].first && people.second == door[i].second && door_flag[i])
+                            {
+                                inter.start_interact(3, 0);
+                                door_flag[i] = 0;
+                            }
+                    }
                     break;
                 case 75:
                     this->Change_Human_Position(-1);

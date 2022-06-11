@@ -1,5 +1,5 @@
 Blood:
-90
+48
 Starveness:
 70
 Weapons:
@@ -7,4 +7,6 @@ Weapons:
 ###
 Props:
 一把破旧的钥匙
+纱布
+军用干粮
 ###

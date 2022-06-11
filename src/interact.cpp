@@ -1,10 +1,15 @@
 #include "../include/interact.h"
 #include "../include/attributes.h"
+#include "../include/map.h"
+#include "../include/IO.h"
 
+#include<conio.h>
+#include<iostream>
 
 extern Attributes attr;
+extern Map m;
 
-void interact::start_interact(int choice)
+void interact::start_interact(int choice, int up_or_down)
 {
     switch (choice)
     {
@@ -15,7 +20,7 @@ void interact::start_interact(int choice)
             interact_with_door();
             break;
         case 4:
-            interact_with_stairs();
+            interact_with_stairs(up_or_down);
             break;
         default:
             break;
@@ -125,7 +130,52 @@ void interact::interact_with_monster()
     return;
 }
 
-void interact::interact_with_stairs()
+void interact::interact_with_stairs(int up_or_down)
 {
+    if (up_or_down == 1) {
+        system("cls");
+        if (m.floor > 1) {
+            attr.write_attr(1);
+            attr.Show_All();
+            IO io_ini;
+            io_ini.write_map(m,1);
+            m.floor --;
+            io_ini.read_map(m,0);
+            m.Show_Floor();
+            m.Draw_Map();
+            m.Listen_Keyboard();
+        } else {
+            attr.write_attr(1);
+            attr.Show_All();
+            IO io_ini;
+            io_ini.write_map(m,1);
+            io_ini.read_map(m,1);
+            m.Show_Floor();
+            m.Draw_Map();
+            m.Listen_Keyboard();
+        }
+    } else {
+        system("cls");
+        if (m.floor < 7) { 
+            attr.write_attr(1);
+            attr.Show_All();
+            IO io_ini;
+            io_ini.write_map(m,1);
+            m.floor ++;
+            io_ini.read_map(m,0);
+            m.Show_Floor();
+            m.Draw_Map();
+            m.Listen_Keyboard();
+        } else {
+            attr.write_attr(1);
+            attr.Show_All();
+            IO io_ini;
+            io_ini.write_map(m,1);
+            io_ini.read_map(m,1);
+            m.Show_Floor();
+            m.Draw_Map();
+            m.Listen_Keyboard();
+        }
+    }
     return;
 }

@@ -8,7 +8,7 @@ make.exe: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jun 03 11:41:48 2022
+# Make data base, printed on Sat Jun 11 14:31:57 2022
 
 # Variables
 
@@ -20,6 +20,8 @@ GNUMAKEFLAGS :=
 ?F = $(notdir $?)
 # environment
 QTMSBUILD = C:\Users\IvanH\AppData\Local\QtMsBuild
+# environment
+WSLENV = WT_SESSION::WT_PROFILE_ID
 # default
 .SHELLFLAGS := -c
 # makefile
@@ -45,17 +47,15 @@ CLION = D:\CLion 2021.2.3\bin;
 # environment
 WINDIR = C:\WINDOWS
 # environment
-VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"42e84e0914b17800d483f69e299e1b00.zh-cn","_translationsConfigFile":"C:\\Users\\IvanH\\AppData\\Roaming\\Code\\clp\\42e84e0914b17800d483f69e299e1b00.zh-cn\\tcf.json","_cacheRoot":"C:\\Users\\IvanH\\AppData\\Roaming\\Code\\clp\\42e84e0914b17800d483f69e299e1b00.zh-cn","_resolvedLanguagePackCoreLocation":"C:\\Users\\IvanH\\AppData\\Roaming\\Code\\clp\\42e84e0914b17800d483f69e299e1b00.zh-cn\\c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5","_corruptedFile":"C:\\Users\\IvanH\\AppData\\Roaming\\Code\\clp\\42e84e0914b17800d483f69e299e1b00.zh-cn\\corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"4d12339779e8282869a6d44b7af3df1e.zh-cn","_translationsConfigFile":"C:\\Users\\IvanH\\AppData\\Roaming\\Code\\clp\\4d12339779e8282869a6d44b7af3df1e.zh-cn\\tcf.json","_cacheRoot":"C:\\Users\\IvanH\\AppData\\Roaming\\Code\\clp\\4d12339779e8282869a6d44b7af3df1e.zh-cn","_resolvedLanguagePackCoreLocation":"C:\\Users\\IvanH\\AppData\\Roaming\\Code\\clp\\4d12339779e8282869a6d44b7af3df1e.zh-cn\\4af164ea3a06f701fe3e89a2bcbb421d2026b68f","_corruptedFile":"C:\\Users\\IvanH\\AppData\\Roaming\\Code\\clp\\4d12339779e8282869a6d44b7af3df1e.zh-cn\\corrupted.info","_languagePackSupport":true}
 # environment
 ONEDRIVE = C:\Users\IvanH\OneDrive
 # environment
 PUBLIC = C:\Users\Public
 # environment
-PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
-# environment
-FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
 TMP = C:\Users\IvanH\AppData\Local\Temp
 # environment
@@ -65,19 +65,21 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-1d788a46-fdbe-4abe-ace3-3487cd79b3fb-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-ed0c44cc-e4f2-4dd3-8c9d-a63644230758-sock
 # environment
-VSCODE_CWD = D:\Microsoft VS Code
+VSCODE_CWD = E:\OOP_MUD_Game
 # default
 MAKE_HOST := Windows32
 # environment
-PATH = C:\Program Files\Eclipse Adoptium\jdk-17.0.1.12-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk-15.0.1\bin;D:\Vim\vim82;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;D:\Xilinx\Vivado\2017.4\bin;D:\texlive\2021\bin\win32;C:\ProgramData\chocolatey\bin;C:\Users\IvanH\AppData\Local\Programs\Python\Python38\;D:\Desktop\CTF\sqlmap-dev;C:\Program Files\Java\jdk-15.0.2\bin;C:\Program Files\Java\jdk-15.0.2\jre\bin;C:\cmder;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\IvanH\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\IvanH\AppData\Local\Programs\Python\Python38\;C:\Users\IvanH\AppData\Local\Microsoft\WindowsApps;C:\Users\IvanH\AppData\Local\GitHubDesktop\bin;C:\MinGW\bin;D:\modeltech64_10.4\win64;D:\Vim\vim82;C:\Users\IvanH\.dotnet\tools;D:\texlive\2021\bin\win32;D:\Microsoft VS Code\bin;D:\Desktop\CTF\sqlmap-dev;D:\CLion 2021.2.3\bin;;D:\cmder;C:\Program Files\MySQL\MySQL Server 8.0\bin;
+PATH = C:\Program Files\Eclipse Adoptium\jdk-17.0.1.12-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk-15.0.1\bin;D:\Vim\vim82;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;D:\Xilinx\Vivado\2017.4\bin;D:\texlive\2021\bin\win32;C:\ProgramData\chocolatey\bin;C:\Users\IvanH\AppData\Local\Programs\Python\Python38\;D:\Desktop\CTF\sqlmap-dev;C:\Program Files\Java\jdk-15.0.2\bin;C:\Program Files\Java\jdk-15.0.2\jre\bin;C:\cmder;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\IvanH\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\IvanH\AppData\Local\Microsoft\WindowsApps;C:\Users\IvanH\AppData\Local\GitHubDesktop\bin;C:\MinGW\bin;D:\modeltech64_10.4\win64;C:\Users\IvanH\.dotnet\tools;D:\Microsoft VS Code\bin;D:\CLion 2021.2.3\bin;D:\cmder
 # environment
 ONLINESERVICES = Online Services
 # environment
 COMMONPROGRAMW6432 = C:\Program Files\Common Files
 # environment
 ZES_ENABLE_SYSMAN = 1
+# environment
+LC_ALL = C
 # environment
 CHOCOLATEYLASTPATHUPDATE = 132767680797709090
 # environment
@@ -99,7 +101,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_15640_AWWUHYJWCRWKPXIE
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_2260_HWMMLWEGQZIROZXS
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -115,6 +117,8 @@ ASL.LOG = Destination=file
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
+WT_SESSION = d93545b1-360c-4a9d-9bac-1312c9eb6ae8
+# environment
 USERNAME = IvanH
 # environment
 MGLS_LICENSE_FILE = D:\modeltech64_10.4\win64\LICENSE.TXT
@@ -123,7 +127,9 @@ KMP_DUPLICATE_LIB_OK = TRUE
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\IvanH\AppData\Roaming\Code\CachedData\c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = C:\Users\IvanH\AppData\Roaming\Code\CachedData\4af164ea3a06f701fe3e89a2bcbb421d2026b68f
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
@@ -157,7 +163,7 @@ PROGRAMFILES(X86) = C:\Program Files (x86)
 # environment
 LOCALAPPDATA = C:\Users\IvanH\AppData\Local
 # environment
-PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+PSMODULEPATH = C:\Users\IvanH\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
 # default
 MAKE_COMMAND := make.exe
 # environment
@@ -171,7 +177,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
 # environment
 OS = Windows_NT
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\2d48f20f2f755c696283148fe84d806b-1.67.2-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\2d48f20f2f755c696283148fe84d806b-1.68.0-main-sock
 # environment
 HOMEPATH = \Users\IvanH
 # makefile (from 'Makefile', line 1)
@@ -199,6 +205,8 @@ APPDATA = C:\Users\IvanH\AppData\Roaming
 # environment
 TEMP = C:\Users\IvanH\AppData\Local\Temp
 # environment
+WT_PROFILE_ID = {61c54bbd-c2c6-5271-96e7-009a87ff44bf}
+# environment
 COMSPEC = C:\WINDOWS\system32\cmd.exe
 # default
 MAKEFILES := 
@@ -209,15 +217,13 @@ VS160COMCOMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio\2019\Communit
 # environment
 MKL_SERIAL = YES
 # environment
-LC_ALL = C
+ELECTRON_NO_ATTACH_CONSOLE = 1
 # automatic
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
 # environment
 SYSTEMDRIVE = C:
-# environment
-SESSIONNAME = Console
 # environment
 PROCESSOR_REVISION = a502
 # default
@@ -229,13 +235,11 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
-# environment
-VSCODE_PID = 15640
+VSCODE_PID = 2260
 # environment
 USERDOMAIN_ROAMINGPROFILE = LAPTOP-CCFHHGVA
 # variable set hash-table stats:
-# Load=111/1024=11%, Rehash=0, Collisions=18/135=13%
+# Load=113/1024=11%, Rehash=0, Collisions=20/137=15%
 
 # Pattern-specific Variable Values
 
@@ -243,11 +247,11 @@ USERDOMAIN_ROAMINGPROFILE = LAPTOP-CCFHHGVA
 
 # Directories
 
-# include (key e:/OOP_MUD_Game/include, mtime 1654175990): 11 files, no impossibilities.
-# . (key e:/OOP_MUD_Game, mtime 1654227694): 13 files, no impossibilities.
-# src (key e:/OOP_MUD_Game/src, mtime 1654175990): 11 files, no impossibilities.
+# include (key e:/OOP_MUD_Game/include, mtime 1654928980): 11 files, no impossibilities.
+# . (key e:/OOP_MUD_Game, mtime 1654929044): 14 files, no impossibilities.
+# src (key e:/OOP_MUD_Game/src, mtime 1654928980): 11 files, no impossibilities.
 
-# 35 files, no impossibilities in 3 directories.
+# 36 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -294,7 +298,7 @@ include/play_music.h:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-02 21:19:50
+#  Last modified 2022-06-03 13:09:55
 #  File has been updated.
 #  Successfully updated.
 
@@ -387,7 +391,7 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 8):
+#  recipe to execute (from 'Makefile', line 9):
 	del *.exe 
 
 # Not a target:
@@ -407,7 +411,8 @@ One_Way_Out.exe: main.cpp src/play_music.cpp src/food.cpp src/attributes.cpp src
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 4):
-	g++ main.cpp src/start_menu.cpp src/attributes.cpp src/map.cpp src/IO.cpp src/play_music.cpp src/environment_setting.cpp src/about_us.cpp src/interact.cpp -o One_Way_Out.exe -lwinmm
+	g++ main.cpp src/start_menu.cpp src/attributes.cpp src/map.cpp src/IO.cpp src/play_music.cpp \
+	src/environment_setting.cpp src/about_us.cpp src/interact.cpp -o One_Way_Out.exe -lwinmm
 
 # files hash-table stats:
 # Load=26/1024=3%, Rehash=0, Collisions=0/57=0%
@@ -420,9 +425,9 @@ One_Way_Out.exe: main.cpp src/play_music.cpp src/food.cpp src/attributes.cpp src
 # strcache buffers: 1 (0) / strings = 55 / storage = 677 B / avg = 12 B
 # current buf: size = 8162 B / used = 677 B / count = 55 / avg = 12 B
 
-# strcache performance: lookups = 70 / hit rate = 21%
+# strcache performance: lookups = 71 / hit rate = 22%
 # hash-table stats:
-# Load=55/8192=1%, Rehash=0, Collisions=3/70=4%
-# Finished Make data base on Fri Jun 03 11:41:48 2022
+# Load=55/8192=1%, Rehash=0, Collisions=3/71=4%
+# Finished Make data base on Sat Jun 11 14:31:57 2022
 
  
