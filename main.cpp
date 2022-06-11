@@ -15,6 +15,7 @@ About_US as;
 Attributes attr;
 interact inter;
 
+
 int main() {
     srand((unsigned)time(NULL));
     environment_setting();    

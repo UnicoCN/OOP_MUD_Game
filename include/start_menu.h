@@ -9,6 +9,7 @@ class start_menu
         int choice;
         std::string menu[4];
         std::string lots_of_tab;
+        void GameStart();
     public:
         /* 初始化菜单 */
         start_menu(int _choice = 0) : choice(_choice)

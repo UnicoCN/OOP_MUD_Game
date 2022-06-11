@@ -19,8 +19,9 @@ private:
     unsigned long Blood; // 血量
     unsigned long Starveness; // 饥饿值
     unsigned long Attack;
-
+    int San;
     unsigned long SwitchWeaponToAttack(std::string w);
+    void use_prop(int choice);
     
 public:
     Attributes (); // 构造函数
@@ -31,12 +32,16 @@ public:
     void Show_All();
     void Re_Show_All();
     unsigned long Get_Attack();
+    int Get_San();
     void Add_Weapons(std::string w, bool is_add); // 修改武器
     void Add_Props(std::string w, bool is_add); // 修改道具
     void Change_Blood(int num); // 更改血量
     void Change_Starveness(int num); // 更改饥饿值
+    void Change_San(int num);
     bool read_attr(int option);
     bool write_attr(int option);
+    void openbag();
+    void closebag();
 };
 
 #endif

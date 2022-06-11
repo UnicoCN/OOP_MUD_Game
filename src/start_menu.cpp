@@ -92,6 +92,7 @@ void start_menu::Choose()
     int choice = this->dead_lock();
     if (choice == 0)
     {
+        GameStart();
         system("cls");
         attr.read_attr(0);
         attr.Show_All();
@@ -120,4 +121,33 @@ void start_menu::Choose()
     {
         exit(0);
     }
+}
+
+void start_menu::GameStart()
+{
+    system("cls");
+    std::cout << "欢迎入住天堂酒店！" << std::endl;
+    Sleep(1000);
+    std::cout << "在离开那里之后，梦魇一直折磨着你……" << std::endl;
+    Sleep(1000);
+    std::cout << "银行卡上夸张的数字提醒着你，那不是一场梦，而是真实发生过的事情……" << std::endl;
+    Sleep(1000);
+    std::cout << "你决定换个环境，于是来到了这个风景如画的小岛上度假。" << std::endl;
+    Sleep(1000);
+    std::cout << "你斥巨资在岛上最好的天堂酒店订下了房间，准备享受你的假期。" << std::endl;
+    Sleep(1000);
+    std::cout << "“欢迎光临”" << std::endl;
+    Sleep(1000);
+    std::cout << "你从前台手中接过了房卡，住进了顶层的总统套房。" << std::endl;
+    Sleep(1000);
+    std::cout << "疲倦的你倒在床上沉沉睡去。" << std::endl;
+    Sleep(1000);
+    std::cout << "梦中，你又回到了那里，它扼住你的喉咙，对你说“欢迎入住，天堂酒店！”" << std::endl;
+    Sleep(1000);
+    std::cout << "你一身冷汗，从梦中惊醒，才意识到你已经从那里逃了出来，这只不过是一场梦。" << std::endl;
+    Sleep(1000);
+    std::cout << "……如果门外的前台不用它的声音说“欢迎，入住，天堂，酒店”…………就好了…………" << std::endl;
+    Sleep(1000);
+    std::cout << "请按回车开始游戏" << std::endl;
+    getchar();
 }

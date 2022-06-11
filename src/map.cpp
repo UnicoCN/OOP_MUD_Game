@@ -20,7 +20,6 @@ extern interact inter;
     2 怪
     3 门
     4 梯
-    （待添加）
 */
 
 // 1 代表 与灯重合
@@ -28,6 +27,7 @@ extern interact inter;
 // 3 代表 与门重合
 // 4 代表 与梯子重合
 int collide;
+bool bag_open = false;
 
 int Map::Check_Object(int x, int y)
 {
@@ -201,27 +201,34 @@ void Map::Update_Map()
     Check_Object(this->people.first, this->people.second);
     switch (collide)
     {
-        case 1:
-            std::cout << "你咋不上天呢？" << std::endl;
-            break;
-        case 2:
-            std::cout << "一场战斗在所难免" << std::endl;
-            inter.start_interact(2, 0);
-            for (int i = 0; i < monster.size(); ++i)
-                if (people.first == monster[i].first && people.second == monster[i].second)
-                    monster_flag[i] = 0;
-            break;
-        case 3:
-            std::cout << "要进去看看吗？" << std::endl;
-            break;
-        case 4:
-            std::cout << "往上还是往下？还是···留在这里？" << std::endl;
-            std::cout << "j往下，k往上,嘻嘻:)" << std::endl;
-            break;
-        default:
-            std::cout << "                                  " << std::endl;
-            std::cout << "                                  " << std::endl;
-            break;
+    case 1:
+        std::cout << "你咋不上天呢？" << std::endl;
+        break;
+    case 2:
+        std::cout << "看来，只能和它打一架了……" << std::endl;
+        std::cout << "杀了它，能不能让“它”同样感到恐惧？" << std::endl;
+        inter.start_interact(2, 0);
+        for (int i = 0; i < monster.size(); ++i)
+            if (people.first == monster[i].first && people.second == monster[i].second)
+                monster_flag[i] = 0;
+        Sleep(500);
+        break;
+    case 3:
+        std::cout << "要进去看看吗？（按下回车键进行交互）" << std::endl;
+        break;
+    case 4:
+        std::cout << "往上还是往下？还是···留在这里？（按下j选择下楼，k选择上楼）" << std::endl;
+        break;
+    default:
+        std::cout << "                                                                  " << std::endl;
+        std::cout << "                                                                  " << std::endl;
+        std::cout << "                                                                  " << std::endl;
+        std::cout << "                                                                  " << std::endl;
+        std::cout << "                                                                  " << std::endl;
+        std::cout << "                                                                  " << std::endl;
+        std::cout << "                                                                  " << std::endl;
+        std::cout << "                                                                  " << std::endl;
+        break;
     }
 }
 
@@ -242,20 +249,32 @@ void Map::Listen_Keyboard()
             ch = _getch();
             switch (ch)
             {
+                case 101:
+                    attr.openbag();
+                    break;
+                
                 case 106:
-                    if(collide == 4) inter.start_interact(collide, 1);
+                    if (collide == 4)
+                        inter.start_interact(collide, 1);
                     break;
                 case 107:
-                    if (collide == 4) inter.start_interact(collide, 0);
+                    if (collide == 4)
+                        inter.start_interact(collide, 0);
                     break;
                 case 13:
                     if (collide == 3)
                     {
-                        for(int i = 0; i < door.size(); ++i)
+                        for (int i = 0; i < door.size(); ++i)
                             if (people.first == door[i].first && people.second == door[i].second && door_flag[i])
                             {
                                 inter.start_interact(3, 0);
                                 door_flag[i] = 0;
+                                break;
+                            }
+                            else if(people.first == door[i].first && people.second == door[i].second && !door_flag[i])
+                            {
+                                std::cout << "这里我来过了吧，我想没有再进去的必要了……" << std::endl;
+                                break;
                             }
                     }
                     break;
