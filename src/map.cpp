@@ -215,6 +215,12 @@ void Map::Update_Map()
         break;
     case 3:
         std::cout << "要进去看看吗？（按下回车键进行交互）" << std::endl;
+        for (int i = 0; i < door.size(); ++i)
+            if(people.first == door[i].first && people.second == door[i].second && !door_flag[i])
+            {
+                std::cout << "这里我来过了吧，我想没有再进去的必要了……" << std::endl;
+                break;
+            }
         break;
     case 4:
         std::cout << "往上还是往下？还是···留在这里？（按下j选择下楼，k选择上楼）" << std::endl;
@@ -269,11 +275,6 @@ void Map::Listen_Keyboard()
                             {
                                 inter.start_interact(3, 0);
                                 door_flag[i] = 0;
-                                break;
-                            }
-                            else if(people.first == door[i].first && people.second == door[i].second && !door_flag[i])
-                            {
-                                std::cout << "这里我来过了吧，我想没有再进去的必要了……" << std::endl;
                                 break;
                             }
                     }

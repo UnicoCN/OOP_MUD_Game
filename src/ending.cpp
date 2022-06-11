@@ -55,6 +55,7 @@ void Ending(int san)
         std::cout << "“现在你们如愿了。”" << std::endl;
         std::cout << "达成结局——重返人间" << std::endl;
     }
+    Sleep(5000);
     std::cout << "输入回车以结束游戏" << std::endl;
     getchar();
     exit(0);

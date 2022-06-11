@@ -1,12 +1,10 @@
 Blood:
-48
+73
 Starveness:
-70
+100
 Weapons:
 普通的木棍
 ###
 Props:
 一把破旧的钥匙
-止痛药
-罐头
 ###

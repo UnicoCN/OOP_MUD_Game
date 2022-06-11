@@ -48,7 +48,7 @@ void Attributes::Show_Props()
 {
     SetConsoleOutputCP(65001);
     std::cout << "物品: （按e键可以打开背包并使用物品）";
-    for (int i = 0; i < Props_Num; ++i)
+    for (int i = 0; i < Props.size(); ++i)
         std::cout << Props[i] << " ";
     std::cout << std::endl;
 }
@@ -158,10 +158,14 @@ void Attributes::openbag()
 void Attributes::use_prop(int choice)
 {
     std::string target = Props[choice];
-    auto it = Props.begin();
-    for (int i = 0; i <= choice; ++i, ++it)
-        ;
-    Props.erase(it);
+    for(auto it = Props.begin(); it != Props.end(); ++it)
+    {
+        if((*it) == target)
+        {
+            Props.erase(it);
+            break;
+        }
+    }
     if (target == "怪物肉")
     {
         Change_Starveness(30);
@@ -204,7 +208,7 @@ void Attributes::use_prop(int choice)
     {
         Change_Blood(30);
         Change_San(-20);
-        std::cout << "难以致信，那群怪物竟然还能留下干净的纱布！" << std::endl;
+        std::cout << "我感觉……没有那么痛了" << std::endl;
     }
     else
     {
