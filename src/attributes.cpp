@@ -15,10 +15,11 @@ Attributes::Attributes()
 {
     Weapons_Num = 1;
     Props_Num = 1;
-    Weapons[0] = "普通的木棍";
-    Props[0] = "一把破旧的钥匙";
+    Weapons.push_back("普通的木棍");
+    Props.push_back("一把破旧的钥匙");
     Blood = 100;
     Starveness = 100;
+    Attack = 10;
 }
 
 void Attributes::Show_Blood()
@@ -106,10 +107,52 @@ void Attributes::Change_Starveness(int num)
 
 void Attributes::Add_Weapons(std::string w, bool is_add)
 {
+    char choice;
+    if(Weapons_Num < Max_Weapon)
+    {
+        Weapons_Num++;
+        Weapons.push_back(w);
+        Attack = SwitchWeaponToAttack(w);
+    }
+    else
+    {
+        HANDLE hOut;
+        COORD pos = {0, 13};
+        hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleCursorPosition(hOut, pos);
+        std::cout << "我没必要带这么多武器，应该丢掉哪一把？" << std::endl;
+        std::cout << "[0] " << w << std::endl;
+        std::cout << "[1] " << Weapons[0] << std::endl;
+        while(1)
+        {
+            choice = getchar();
+            if(choice == '0')
+                break;
+            else if(choice == '1')
+            {
+                Weapons.pop_back();
+                Weapons.push_back(w);
+                Attack = SwitchWeaponToAttack(w);
+                break;
+            }
+        }
+        hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleCursorPosition(hOut, pos);
+        std::cout << "                                      " << std::endl;
+        std::cout << "                                      " << std::endl;
+        std::cout << "                                      " << std::endl;
+        std::cout << "                                      " << std::endl;
+    }
+    return;
 }
 
 void Attributes::Add_Props(std::string w, bool is_add)
 {
+    if(Props_Num < Max_Props)
+    {
+        Props_Num++;
+        Props.push_back(w);
+    }
 }
 
 
@@ -202,4 +245,24 @@ bool Attributes::write_attr(int option) {
         out_stream.close();
         return true;
     }
+}
+
+unsigned long Attributes::SwitchWeaponToAttack(std::string w)
+{
+    std::string oxe = "消防斧";
+    std::string knife = "水果刀";
+    std::string bang = "普通的木棍";
+    if(w == oxe)
+        return 30;
+    else if(w == knife)
+        return 20;
+    else if(w == bang)
+        return 15;
+    else
+        return 10;
+}
+
+unsigned long Attributes::Get_Attack()
+{
+    return Attack;
 }

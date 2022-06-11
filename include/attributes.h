@@ -3,8 +3,10 @@
 
 #include<string>
 #include<stdbool.h>
+#include<vector>
+#include<stdio.h>
 
-#define Max_Weapon 10
+#define Max_Weapon 1
 #define Max_Props 10
 
 
@@ -12,10 +14,13 @@ class Attributes {
 private:
     unsigned long Weapons_Num; // 武器数量
     unsigned long Props_Num; // 道具数量
-    std::string Weapons[Max_Weapon]; // 武器
-    std::string Props[Max_Props];// 道具
+    std::vector<std::string> Weapons; // 武器
+    std::vector<std::string> Props;// 道具
     unsigned long Blood; // 血量
     unsigned long Starveness; // 饥饿值
+    unsigned long Attack;
+
+    unsigned long SwitchWeaponToAttack(std::string w);
     
 public:
     Attributes (); // 构造函数
@@ -25,6 +30,7 @@ public:
     void Show_Props(); // 显示道具
     void Show_All();
     void Re_Show_All();
+    unsigned long Get_Attack();
     void Add_Weapons(std::string w, bool is_add); // 修改武器
     void Add_Props(std::string w, bool is_add); // 修改道具
     void Change_Blood(int num); // 更改血量

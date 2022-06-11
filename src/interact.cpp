@@ -46,7 +46,7 @@ void interact::interact_with_door()
                     attr.Add_Weapons("水果刀", true);
                     break;
                 default:
-                    attr.Add_Weapons("一根普通的木棍", true);
+                    attr.Add_Weapons("普通的木棍", true);
                     break;
             }
             break;
@@ -109,6 +109,19 @@ void interact::interact_with_door()
 
 void interact::interact_with_monster()
 {
+    int monster_life = rand() % 20 + 20;
+    int monster_attack = rand() % 10 + 10;
+    int human_attack = attr.Get_Attack();
+    while(monster_life >= 0)
+    {
+        int p = rand() % 10;
+        if(p >= 8)
+            monster_life -= 2 * human_attack;
+        else
+            monster_life -= human_attack;
+        attr.Change_Blood(-monster_attack);
+    }
+    attr.Re_Show_All();
     return;
 }
 
