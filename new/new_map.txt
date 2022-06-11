@@ -13,3 +13,9 @@ Door:
 Stair:
 0 5
 -1 -1
+DoorFlag:
+1
+-1
+MonsterFlag:
+1
+-1

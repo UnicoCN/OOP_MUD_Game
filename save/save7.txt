@@ -1,5 +1,5 @@
 People:
-0 25
+0 21
 -1 -1
 Light:
 4 80
@@ -13,3 +13,9 @@ Door:
 Stair:
 0 5
 -1 -1
+DoorFlag:
+1
+-1
+MonsterFlag:
+1
+-1

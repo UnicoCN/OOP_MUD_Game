@@ -51,6 +51,16 @@ bool IO::write_map(Map &data, int option)
             out_stream << (*it).first << ' ' << (*it).second << std::endl;
         out_stream << -1 << ' ' << -1 << std::endl;
 
+        out_stream << "DoorFlag:" << std::endl;
+        for (auto it = data.door_flag.begin(); it != data.door_flag.end(); ++it)
+            out_stream << (*it) << std::endl;
+        out_stream << -1 << std::endl;
+
+        out_stream << "MonsterFlag:" << std::endl;
+        for (auto it = data.monster_flag.begin(); it != data.monster_flag.end(); ++it)
+            out_stream << (*it) << std::endl;
+        out_stream << -1 << std::endl;
+
         out_stream.close();
         return true;
     }
@@ -130,6 +140,30 @@ bool IO::read_map(Map &data, int option)
                     if (x == -1 && y == -1)
                         break;
                     data.stair.push_back(std::make_pair(x, y));
+                }
+                continue;
+            }
+
+            if (type == "DoorFlag:")
+            {
+                while (1)
+                {
+                    in_stream >> x;
+                    if (x == -1)
+                        break;
+                    data.door_flag.push_back(x);
+                }
+                continue;
+            }
+
+            if (type == "MonsterFlag:")
+            {
+                while (1)
+                {
+                    in_stream >> x;
+                    if (x == -1)
+                        break;
+                    data.monster_flag.push_back(x);
                 }
                 continue;
             }

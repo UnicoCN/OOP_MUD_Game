@@ -1,7 +1,7 @@
 Blood:
-90
+100
 Starveness:
-70
+100
 Weapons:
 普通的木棍
 ###

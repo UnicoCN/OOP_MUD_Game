@@ -12,7 +12,8 @@ class map_data
         std::vector<std::pair<int, int>> monster;
         std::vector<std::pair<int, int>> door;
         std::vector<std::pair<int, int>> stair;
-        std::vector<std::pair<int, int>> object;
+        std::vector<int> door_flag;
+        std::vector<int> monster_flag;
 
         map_data() = default;
 };
