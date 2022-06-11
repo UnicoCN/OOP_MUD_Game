@@ -91,6 +91,7 @@ void Attributes::Change_Blood(int num)
             attr.read_attr(0);
             attr.Show_All();
             IO io_ini;
+            m.floor = 7;
             io_ini.read_map(m, 0);
             m.Show_Floor();
             m.Draw_Map();
